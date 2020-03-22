@@ -44,11 +44,12 @@
             this.comboColumnB = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.logLabel = new System.Windows.Forms.Label();
             this.infoLabel = new System.Windows.Forms.Label();
             this.labelPathA = new System.Windows.Forms.Label();
             this.labelPathB = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exit
@@ -93,11 +94,10 @@
             this.button1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(10, 80);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 37);
+            this.button1.Size = new System.Drawing.Size(168, 30);
             this.button1.TabIndex = 3;
             this.button1.Text = "Wybierz Plik A";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fileButtonB
             // 
@@ -106,7 +106,7 @@
             this.fileButtonB.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fileButtonB.Location = new System.Drawing.Point(203, 80);
             this.fileButtonB.Name = "fileButtonB";
-            this.fileButtonB.Size = new System.Drawing.Size(168, 37);
+            this.fileButtonB.Size = new System.Drawing.Size(168, 30);
             this.fileButtonB.TabIndex = 4;
             this.fileButtonB.Text = "Wybierz Plik B";
             this.fileButtonB.UseVisualStyleBackColor = false;
@@ -209,25 +209,13 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Info;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(10, 317);
+            this.textBox1.Location = new System.Drawing.Point(10, 288);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(640, 113);
+            this.textBox1.Size = new System.Drawing.Size(640, 142);
             this.textBox1.TabIndex = 14;
-            // 
-            // logLabel
-            // 
-            this.logLabel.AutoSize = true;
-            this.logLabel.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.logLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.logLabel.Location = new System.Drawing.Point(12, 278);
-            this.logLabel.Name = "logLabel";
-            this.logLabel.Size = new System.Drawing.Size(32, 19);
-            this.logLabel.TabIndex = 15;
-            this.logLabel.Text = "Log";
-            this.logLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // infoLabel
             // 
@@ -265,11 +253,35 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(446, 123);
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(446, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(346, 23);
             this.label4.TabIndex = 19;
-            this.label4.Text = "label4";
+            this.label4.Text = "Ścieżka pliku A";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(446, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(346, 23);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Ścieżka pliku B";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.Location = new System.Drawing.Point(391, 204);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(401, 59);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Porównaj";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // fileButtonA
             // 
@@ -277,11 +289,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(804, 442);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelPathB);
             this.Controls.Add(this.labelPathA);
             this.Controls.Add(this.infoLabel);
-            this.Controls.Add(this.logLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboColumnB);
@@ -329,11 +342,12 @@
         private System.Windows.Forms.ComboBox comboColumnB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label logLabel;
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Label labelPathA;
         private System.Windows.Forms.Label labelPathB;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
     }
 }
 

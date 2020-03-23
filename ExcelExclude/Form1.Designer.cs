@@ -47,9 +47,9 @@
             this.infoLabel = new System.Windows.Forms.Label();
             this.labelPathA = new System.Windows.Forms.Label();
             this.labelPathB = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pathLabelA = new System.Windows.Forms.Label();
+            this.pathLabelB = new System.Windows.Forms.Label();
+            this.compareButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exitButton
@@ -111,6 +111,7 @@
             this.fileBButton.TabIndex = 4;
             this.fileBButton.Text = "Wybierz Plik B";
             this.fileBButton.UseVisualStyleBackColor = false;
+            this.fileBButton.Click += new System.EventHandler(this.fileBButton_Click);
             // 
             // comboSheetA
             // 
@@ -226,12 +227,12 @@
             this.infoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.infoLabel.Cursor = System.Windows.Forms.Cursors.Help;
             this.infoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoLabel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoLabel.Location = new System.Drawing.Point(391, 9);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(401, 105);
             this.infoLabel.TabIndex = 16;
-            this.infoLabel.Text = "Wybierz Plik A";
+            this.infoLabel.Text = "Siema Gabi!";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelPathA
@@ -254,37 +255,37 @@
             this.labelPathB.Text = "PLIK B :::";
             this.labelPathB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // pathLabelA
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(451, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(340, 23);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Ścieżka pliku A";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pathLabelA.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pathLabelA.Location = new System.Drawing.Point(451, 122);
+            this.pathLabelA.Name = "pathLabelA";
+            this.pathLabelA.Size = new System.Drawing.Size(340, 23);
+            this.pathLabelA.TabIndex = 19;
+            this.pathLabelA.Text = "Ścieżka pliku A";
+            this.pathLabelA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // pathLabelB
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(452, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(340, 23);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Ścieżka pliku B";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pathLabelB.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pathLabelB.Location = new System.Drawing.Point(452, 152);
+            this.pathLabelB.Name = "pathLabelB";
+            this.pathLabelB.Size = new System.Drawing.Size(340, 23);
+            this.pathLabelB.TabIndex = 20;
+            this.pathLabelB.Text = "Ścieżka pliku B";
+            this.pathLabelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // compareButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(391, 187);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(401, 76);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Porównaj";
-            this.button2.UseVisualStyleBackColor = false;
+            this.compareButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.compareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.compareButton.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.compareButton.Location = new System.Drawing.Point(391, 187);
+            this.compareButton.Name = "compareButton";
+            this.compareButton.Size = new System.Drawing.Size(401, 76);
+            this.compareButton.TabIndex = 21;
+            this.compareButton.Text = "Porównaj";
+            this.compareButton.UseVisualStyleBackColor = false;
             // 
             // fileButtonA
             // 
@@ -292,9 +293,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(804, 442);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.compareButton);
+            this.Controls.Add(this.pathLabelB);
+            this.Controls.Add(this.pathLabelA);
             this.Controls.Add(this.labelPathB);
             this.Controls.Add(this.labelPathA);
             this.Controls.Add(this.infoLabel);
@@ -348,9 +349,9 @@
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Label labelPathA;
         private System.Windows.Forms.Label labelPathB;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label pathLabelA;
+        private System.Windows.Forms.Label pathLabelB;
+        private System.Windows.Forms.Button compareButton;
     }
 }
 

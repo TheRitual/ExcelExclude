@@ -26,5 +26,10 @@ namespace ExcelExclude
         {
             Application.Exit();
         }
+
+        private void fileAButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
